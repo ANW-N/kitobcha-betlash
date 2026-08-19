@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Betlash</title>
+</head>
+<body>
+    <div class="container">
+        <section>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <div class="form-floating mb-3">
+                        <input type="number" id="start" class="form-control" placeholder="Boshlanish" min="0">
+                        <label for="start">Boshlanish</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating mb-3">
+                        <input type="number" id="end" class="form-control" placeholder="Tugash" min="0">
+                        <label for="end">Tugash</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-floating">
+                <select class="form-select mb-3" id="floatingSelect" aria-label="Floating label select example">
+                    <option value="1" selected>Kitobcha shaklida</option>
+                    <option value="2">Ikki tomonlama</option>
+                </select>
+
+                <label for="floatingSelect">Chop etish turini tanlang</label>
+            </div>
+            <button type="button" class="btn btn-outline-success mb-3" style="width: 100%;" id="print">Chop etish</button>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="old-teskari-t">
+                        <label class="form-check-label" for="old-teskari-t">Teskari tartiblash</label>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="btn btn-primary" id="copy-front">Copy</div>
+                </div>
+            </div>
+            <div class="form-floating">
+                <textarea class="form-control mb-3" placeholder="Natija kutilmoqda..." id="front" readonly></textarea>
+                <label for="front">Old tomoni</label>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="ort-teskari-t">
+                        <label class="form-check-label" for="ort-teskari-t">Teskari tartiblash</label>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <button class="btn btn-primary" id="copy-back">Copy</button>
+                </div>
+            </div>
+            
+            <div class="form-floating">
+                <textarea class="form-control mb-3" placeholder="Natija kutilmoqda..." id="back" readonly></textarea>
+                <label for="back">Orqa tomoni</label>
+            </div>     
+        </section>
+        
+        <footer class="btn btn-secondary" style="width: 100%;">
+            Powered by <span>Nazarbek</span> (Senior dasturchi)
+        </footer>
+    </div>
+    
+    
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
